@@ -14,6 +14,8 @@ const capabilities = [
       "Material didáctico diferenciado por nivel",
       "Actividades interactivas y dinámicas grupales",
       "Bibliografías y recursos complementarios",
+      "Infografías educativas automatizadas",
+      "Mapas conceptuales automáticos",
     ],
   },
   {
@@ -26,6 +28,8 @@ const capabilities = [
       "Seguimiento individual del progreso estudiantil",
       "Reportes de rendimiento por competencias",
       "Detección temprana de estudiantes en riesgo",
+      "Banco de preguntas por tema",
+      "Análisis de dificultad de reactivos",
     ],
   },
   {
@@ -38,6 +42,8 @@ const capabilities = [
       "Actas de reunión y minutas automáticas",
       "Informes de conducta y participación",
       "Coordinación de actividades extracurriculares",
+      "Bitácora docente automática",
+      "Seguimiento de acuerdos con padres",
     ],
   },
   {
@@ -50,6 +56,8 @@ const capabilities = [
       "Proyectos interdisciplinarios automatizados",
       "Recursos multimedia y audiovisuales",
       "Tutoría virtual personalizada 24/7",
+      "Análisis de estilos de aprendizaje",
+      "Sugerencias de recursos digitales",
     ],
   },
 ];
