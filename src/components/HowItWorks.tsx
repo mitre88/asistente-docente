@@ -1,9 +1,12 @@
+"use client";
+
+import RevealOnScroll from "./RevealOnScroll";
+
 const steps = [
   {
     step: "01",
     title: "Conecta tu WhatsApp",
-    description:
-      "Registrate y vincula tu número de WhatsApp en menos de 2 minutos. Sin instalaciones, sin apps adicionales.",
+    description: "Regístrate y vincula tu número de WhatsApp en menos de 2 minutos. Sin instalaciones, sin apps adicionales.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
@@ -14,8 +17,7 @@ const steps = [
   {
     step: "02",
     title: "Configura tu Perfil",
-    description:
-      "Indica tu materia, nivel educativo, numero de estudiantes y preferencias. La IA se adapta a tu contexto.",
+    description: "Indica tu materia, nivel educativo, número de estudiantes y preferencias. La IA se adapta a tu contexto.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="3" />
@@ -26,8 +28,7 @@ const steps = [
   {
     step: "03",
     title: "Envía tu Solicitud",
-    description:
-      'Escribe lo que necesitas en lenguaje natural: "Crea un examen de matematicas para 5to grado sobre fracciones".',
+    description: 'Escribe lo que necesitas en lenguaje natural: "Crea un examen de matemáticas para 5to grado sobre fracciones".',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <line x1="22" y1="2" x2="11" y2="13" />
@@ -38,8 +39,7 @@ const steps = [
   {
     step: "04",
     title: "Recibe al Instante",
-    description:
-      "En segundos recibes el contenido listo para usar, editar o compartir con tus estudiantes directamente.",
+    description: "En segundos recibes el contenido listo para usar, editar o compartir con tus estudiantes directamente.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polyline points="20 6 9 17 4 12" />
@@ -53,41 +53,45 @@ export default function HowItWorks() {
   return (
     <section id="como-funciona" className="py-24 md:py-32 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-16">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Proceso Simple
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
-            Como funciona
+            Cómo funciona
           </h2>
           <p className="text-[var(--color-text-secondary)] text-lg max-w-2xl mx-auto">
             En 4 sencillos pasos estarás automatizando tu labor docente.
             Sin curva de aprendizaje, sin complicaciones.
           </p>
-        </div>
+        </RevealOnScroll>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((s, idx) => (
-            <div key={s.step} className="relative group">
-              {idx < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-12 left-[calc(100%_-_16px)] w-[calc(100%_-_40px)] h-[2px] bg-gradient-to-r from-purple-300 to-transparent z-0" />
-              )}
-              <div className="relative z-10 text-center">
-                <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-gradient-end)] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-xl shadow-purple-500/20">
-                  {s.icon}
+        <div className="relative">
+          {/* Progress line connecting steps (desktop) */}
+          <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-[2px]">
+            <div className="w-full h-full bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-gradient-mid)] to-[var(--color-gradient-end)] rounded-full opacity-30" />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((s, idx) => (
+              <RevealOnScroll key={s.step} delay={Math.min(idx + 1, 4) as 1 | 2 | 3 | 4}>
+                <div className="relative group text-center">
+                  <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-gradient-end)] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-xl shadow-purple-500/20 relative z-10">
+                    {s.icon}
+                  </div>
+                  <div className="text-[var(--color-primary)] font-bold text-sm mb-2">
+                    PASO {s.step}
+                  </div>
+                  <h3 className="text-xl font-bold text-[var(--color-text)] mb-3">
+                    {s.title}
+                  </h3>
+                  <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
+                    {s.description}
+                  </p>
                 </div>
-                <div className="text-[var(--color-primary)] font-bold text-sm mb-2">
-                  PASO {s.step}
-                </div>
-                <h3 className="text-xl font-bold text-[var(--color-text)] mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
-                  {s.description}
-                </p>
-              </div>
-            </div>
-          ))}
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </div>
     </section>
