@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import RevealOnScroll from "./RevealOnScroll";
 
 const tabs = [
   {
     id: "plan",
     label: "Plan de Clase",
-    icon: "📋",
+    icon: <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>,
     content: (
       <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
@@ -42,7 +42,7 @@ const tabs = [
   {
     id: "exam",
     label: "Examen Generado",
-    icon: "📝",
+    icon: <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
     content: (
       <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
@@ -78,7 +78,7 @@ const tabs = [
   {
     id: "report",
     label: "Reporte de Estudiante",
-    icon: "📊",
+    icon: <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>,
     content: (
       <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
@@ -125,7 +125,7 @@ const tabs = [
   {
     id: "letter",
     label: "Comunicado a Padres",
-    icon: "✉️",
+    icon: <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>,
     content: (
       <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
@@ -150,7 +150,7 @@ const tabs = [
   {
     id: "rubric",
     label: "Rúbrica de Evaluación",
-    icon: "📐",
+    icon: <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21.7 5.3l-2.3-2.3a1 1 0 0 0-1.4 0L2.3 18.7a1 1 0 0 0 0 1.4l2.3 2.3a1 1 0 0 0 1.4 0L21.7 6.7a1 1 0 0 0 0-1.4z"/></svg>,
     content: (
       <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left overflow-x-auto">
         <div className="flex items-center justify-between mb-4">
