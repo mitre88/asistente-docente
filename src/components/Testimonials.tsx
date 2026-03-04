@@ -64,15 +64,15 @@ export default function Testimonials() {
   const displayTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)] relative overflow-hidden">
+    <section id="testimonios" className="scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface-dark)] relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-purple-900/15 rounded-full blur-[120px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-6">
             Testimonios
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Lo que dicen nuestros docentes
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">

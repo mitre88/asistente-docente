@@ -51,13 +51,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-28 md:py-36 bg-[var(--color-surface)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="como-funciona" className="scroll-mt-24 scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Proceso Simple
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6">
             Cómo funciona
           </h2>
           <p className="text-[var(--color-text-secondary)] text-lg max-w-2xl mx-auto">
@@ -72,7 +72,7 @@ export default function HowItWorks() {
             <div className="w-full h-full bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-gradient-mid)] to-[var(--color-gradient-end)] rounded-full opacity-30" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {steps.map((s, idx) => (
               <RevealOnScroll key={s.step} delay={Math.min(idx + 1, 4) as 1 | 2 | 3 | 4}>
                 <div className="relative group text-center">

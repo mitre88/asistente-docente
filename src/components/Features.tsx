@@ -85,13 +85,13 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="funcionalidades" className="py-28 md:py-36 bg-[var(--color-surface)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="funcionalidades" className="scroll-mt-24 scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Funcionalidades
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6 text-balance">
             Todo lo que necesitas para{" "}
             <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-gradient-end)] bg-clip-text text-transparent">
               enseñar mejor
@@ -103,12 +103,12 @@ export default function Features() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {features.map((feature, idx) => (
             <RevealOnScroll key={feature.title} delay={Math.min(idx + 1, 4) as 1 | 2 | 3 | 4}>
               <div className="group relative bg-white rounded-2xl p-10 border border-[var(--color-border)] hover:border-purple-200 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 hover:-translate-y-1 card-shine h-full">
                 <div
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform shadow-lg`}
+                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform shadow-lg`}
                   style={{ animation: "none" }}
                   onMouseEnter={(e) => { (e.currentTarget.style.animation as string) ; e.currentTarget.style.animation = "icon-bounce 0.4s ease"; }}
                   onAnimationEnd={(e) => { e.currentTarget.style.animation = "none"; }}

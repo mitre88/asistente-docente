@@ -22,13 +22,13 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-28 md:py-36 bg-[var(--color-surface)]">
-      <div className="max-w-3xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="faq" className="scroll-mt-24 scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)]">
+      <div className="max-w-3xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             FAQ
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6">
             Preguntas Frecuentes
           </h2>
         </RevealOnScroll>
@@ -36,10 +36,10 @@ export default function FAQ() {
         <RevealOnScroll>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-[var(--color-border)] rounded-xl overflow-hidden">
+              <div key={idx} className="border border-[var(--color-border)] rounded-2xl overflow-hidden">
                 <button
                   onClick={() => setOpen(open === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-gray-50 transition-colors duration-300"
                 >
                   <span className="font-semibold text-[var(--color-text)] text-sm pr-4">{faq.q}</span>
                   <svg

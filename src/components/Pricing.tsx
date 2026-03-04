@@ -71,13 +71,13 @@ export default function Pricing() {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section id="precios" className="py-28 md:py-36 bg-[var(--color-surface)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="precios" className="scroll-mt-24 scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Precios
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6">
             Planes para cada necesidad
           </h2>
           <p className="text-[var(--color-text-secondary)] text-lg max-w-2xl mx-auto mb-8">
@@ -109,7 +109,7 @@ export default function Pricing() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
           {plans.map((plan, idx) => {
             const price = annual ? plan.annualPrice : plan.monthlyPrice;
             const showSavings = annual && plan.monthlyPrice !== "Gratis" && plan.monthlyPrice !== "Personalizado";

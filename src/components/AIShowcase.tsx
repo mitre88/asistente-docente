@@ -9,7 +9,7 @@ const tabs = [
     label: "Plan de Clase",
     icon: "📋",
     content: (
-      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <div>
             <span className="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Matemáticas · 3° Primaria</span>
@@ -44,7 +44,7 @@ const tabs = [
     label: "Examen Generado",
     icon: "📝",
     content: (
-      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">Ciencias Naturales · 5° Primaria</span>
           <span className="text-xs text-gray-400">10 reactivos · 30 min</span>
@@ -80,7 +80,7 @@ const tabs = [
     label: "Reporte de Estudiante",
     icon: "📊",
     content: (
-      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Reporte Individual</span>
           <span className="text-xs text-gray-400">Periodo: Enero - Febrero 2026</span>
@@ -127,7 +127,7 @@ const tabs = [
     label: "Comunicado a Padres",
     icon: "✉️",
     content: (
-      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">Comunicado Oficial</span>
           <span className="text-xs text-gray-400">Tono: Formal y cálido</span>
@@ -152,7 +152,7 @@ const tabs = [
     label: "Rúbrica de Evaluación",
     icon: "📐",
     content: (
-      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left overflow-x-auto">
+      <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 text-left overflow-x-auto">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Rúbrica · Exposición Oral</span>
           <span className="text-xs text-gray-400">Escala: 4 niveles</span>
@@ -207,13 +207,13 @@ export default function AIShowcase() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-28 md:py-36 bg-[var(--color-surface)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="demostracion" className="scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Demostración
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6">
             La IA en Acción
           </h2>
           <p className="text-[var(--color-text-secondary)] text-lg max-w-2xl mx-auto">
@@ -222,7 +222,7 @@ export default function AIShowcase() {
         </RevealOnScroll>
 
         <RevealOnScroll>
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <div className="flex overflow-x-auto md:flex-wrap md:justify-center gap-2 mb-10 pb-2 -mx-2 px-2">
             {tabs.map((tab, idx) => (
               <button
                 key={tab.id}

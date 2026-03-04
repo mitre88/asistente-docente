@@ -21,19 +21,20 @@ const statusIcon = (s: string) => {
 
 export default function Comparison() {
   return (
-    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)]">
-      <div className="max-w-5xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-20">
+    <section id="comparativa" className="scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface-dark)]">
+      <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+        <RevealOnScroll className="text-center mb-24">
           <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-4">
             Comparativa
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             ¿Por qué Asistente Docente?
           </h2>
         </RevealOnScroll>
 
         <RevealOnScroll>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-2 px-2 md:mx-0 md:px-0">
+            <p className="text-gray-500 text-xs text-center mb-3 md:hidden">← Desliza para ver más →</p>
             <table className="w-full text-sm">
               <thead>
                 <tr>

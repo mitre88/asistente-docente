@@ -17,7 +17,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 lg:px-8 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left – Text */}
           <div className="text-center lg:text-left">
@@ -28,7 +28,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-[5.2rem] font-bold text-white leading-[1.05] tracking-tight mb-8 animate-fade-in-up text-balance">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[5.2rem] font-bold text-white leading-[1.05] tracking-tight mb-8 animate-fade-in-up text-balance">
               Tu Asistente
               <br />
               <span
@@ -89,15 +89,15 @@ export default function Hero() {
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-8 animate-fade-in-up">
               {[
-                { emoji: "🔒", text: "Datos Seguros" },
-                { emoji: "🇲🇽", text: "Hecho en México" },
-                { emoji: "⚡", text: "Respuesta < 5s" },
+                { icon: <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, text: "Datos Seguros" },
+                { icon: <svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>, text: "Hecho en México" },
+                { icon: <svg className="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, text: "Respuesta < 5s" },
               ].map((badge) => (
                 <div
                   key={badge.text}
                   className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2"
                 >
-                  <span className="text-base">{badge.emoji}</span>
+                  {badge.icon}
                   <span className="text-gray-400 text-xs font-medium">{badge.text}</span>
                 </div>
               ))}

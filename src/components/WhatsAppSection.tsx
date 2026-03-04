@@ -129,15 +129,15 @@ function InteractiveChat() {
 
 export default function WhatsAppSection() {
   return (
-    <section id="whatsapp" className="py-28 md:py-36 bg-[var(--color-surface)] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="whatsapp" className="scroll-mt-24 scroll-mt-24 py-32 md:py-40 bg-[var(--color-surface)] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <RevealOnScroll>
             <div>
               <span className="inline-block text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
                 Integración WhatsApp
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6 text-balance">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-text)] mb-6 text-balance">
                 Funciona donde{" "}
                 <span className="text-[var(--color-accent)]">ya estás</span>
               </h2>
