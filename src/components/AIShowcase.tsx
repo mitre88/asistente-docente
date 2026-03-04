@@ -9,7 +9,7 @@ const tabs = [
     label: "Plan de Clase",
     icon: "📋",
     content: (
-      <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <div>
             <span className="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Matemáticas · 3° Primaria</span>
@@ -18,7 +18,7 @@ const tabs = [
         </div>
         <h4 className="text-xl font-bold text-gray-900 mb-1">Fracciones equivalentes</h4>
         <p className="text-sm text-gray-500 mb-4">Duración: 50 min · Competencia: Resolución de problemas</p>
-        <div className="space-y-3 text-sm">
+        <div className="space-y-5 text-sm">
           <div className="bg-blue-50 rounded-lg p-3">
             <span className="font-semibold text-blue-800">🎯 Objetivo:</span>
             <span className="text-blue-700 ml-1">El alumno identificará y generará fracciones equivalentes usando material concreto y representaciones gráficas.</span>
@@ -44,13 +44,13 @@ const tabs = [
     label: "Examen Generado",
     icon: "📝",
     content: (
-      <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">Ciencias Naturales · 5° Primaria</span>
           <span className="text-xs text-gray-400">10 reactivos · 30 min</span>
         </div>
         <h4 className="text-xl font-bold text-gray-900 mb-4">Examen: El Sistema Solar</h4>
-        <div className="space-y-4 text-sm">
+        <div className="space-y-5 text-sm">
           <div className="border-l-4 border-blue-400 pl-4">
             <p className="font-semibold text-gray-800">1. Opción múltiple</p>
             <p className="text-gray-600">¿Cuál es el planeta más grande del Sistema Solar?</p>
@@ -80,7 +80,7 @@ const tabs = [
     label: "Reporte de Estudiante",
     icon: "📊",
     content: (
-      <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Reporte Individual</span>
           <span className="text-xs text-gray-400">Periodo: Enero - Febrero 2026</span>
@@ -127,7 +127,7 @@ const tabs = [
     label: "Comunicado a Padres",
     icon: "✉️",
     content: (
-      <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-left">
+      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">Comunicado Oficial</span>
           <span className="text-xs text-gray-400">Tono: Formal y cálido</span>
@@ -152,7 +152,7 @@ const tabs = [
     label: "Rúbrica de Evaluación",
     icon: "📐",
     content: (
-      <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 text-left overflow-x-auto">
+      <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm border border-gray-100 text-left overflow-x-auto">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Rúbrica · Exposición Oral</span>
           <span className="text-xs text-gray-400">Escala: 4 niveles</span>
@@ -207,9 +207,9 @@ export default function AIShowcase() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-12">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Demostración
           </span>
@@ -222,7 +222,7 @@ export default function AIShowcase() {
         </RevealOnScroll>
 
         <RevealOnScroll>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
             {tabs.map((tab, idx) => (
               <button
                 key={tab.id}

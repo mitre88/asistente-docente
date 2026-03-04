@@ -4,7 +4,7 @@ import RevealOnScroll from "./RevealOnScroll";
 
 export default function CTA() {
   return (
-    <section id="contacto" className="py-24 md:py-32 bg-[var(--color-surface-dark)] relative overflow-hidden">
+    <section id="contacto" className="py-28 md:py-36 bg-[var(--color-surface-dark)] relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-900/30 via-blue-900/20 to-cyan-900/30 rounded-full blur-[150px]" />
       </div>

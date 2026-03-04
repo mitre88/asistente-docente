@@ -64,12 +64,12 @@ export default function Testimonials() {
   const displayTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface-dark)] relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)] relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-purple-900/15 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
-          <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-4">
+        <RevealOnScroll className="text-center mb-20">
+          <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-6">
             Testimonios
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -94,18 +94,18 @@ export default function Testimonials() {
               {displayTestimonials.map((t, idx) => (
                 <div
                   key={`${t.name}-${idx}`}
-                  className="glass rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300 flex flex-col shrink-0"
+                  className="glass rounded-2xl p-10 hover:border-purple-500/30 transition-all duration-300 flex flex-col shrink-0"
                   style={{ width: "376px" }}
                 >
                   {/* Stars */}
-                  <div className="flex items-center gap-1 mb-4">
+                  <div className="flex items-center gap-1 mb-6">
                     {[...Array(t.stars)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-300 leading-relaxed mb-6 flex-1">
+                  <p className="text-gray-300 leading-relaxed mb-8 flex-1">
                     &ldquo;{t.text}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">

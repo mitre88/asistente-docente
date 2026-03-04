@@ -63,10 +63,10 @@ const useCases = [
 
 export default function UseCases() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface-dark)] relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)] relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-900/15 rounded-full blur-[150px]" />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-4">
             Casos de Uso
           </span>
@@ -78,21 +78,21 @@ export default function UseCases() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {useCases.map((uc, idx) => (
             <RevealOnScroll key={uc.role} delay={Math.min((idx % 2) + 1, 3) as 1 | 2 | 3}>
-              <div className="glass rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 h-full">
-                <div className="flex items-start gap-4">
+              <div className="glass rounded-xl p-8 hover:border-purple-500/30 transition-all duration-300 h-full">
+                <div className="flex items-start gap-5">
                   <span className="text-3xl">{uc.icon}</span>
                   <div className="flex-1">
                     <h3 className="text-white font-bold text-lg">{uc.role}</h3>
-                    <p className="text-purple-300 text-sm mb-3">{uc.scenario}</p>
-                    <div className="space-y-2">
-                      <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+                    <p className="text-purple-300 text-sm mb-4">{uc.scenario}</p>
+                    <div className="space-y-3">
+                      <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
                         <span className="text-red-400 text-xs font-semibold">❌ Sin IA:</span>
                         <p className="text-gray-400 text-sm mt-1">{uc.before}</p>
                       </div>
-                      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3">
+                      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
                         <span className="text-green-400 text-xs font-semibold">✅ Con Asistente Docente:</span>
                         <p className="text-gray-300 text-sm mt-1">{uc.after}</p>
                       </div>

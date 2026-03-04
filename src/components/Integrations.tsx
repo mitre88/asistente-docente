@@ -15,9 +15,9 @@ const integrations = [
 
 export default function Integrations() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Ecosistema
           </span>
@@ -39,15 +39,15 @@ export default function Integrations() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               {integrations.map((int, idx) => (
                 <div
                   key={int.name}
-                  className={`relative bg-white rounded-xl p-5 border text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group ${
+                  className={`relative bg-white rounded-xl p-6 border text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group ${
                     int.highlight ? "border-green-300 shadow-md shadow-green-500/10" : "border-[var(--color-border)]"
                   }`}
                 >
-                  <div className="text-3xl mb-2">{int.icon}</div>
+                  <div className="text-3xl mb-3">{int.icon}</div>
                   <h4 className="font-bold text-[var(--color-text)] text-sm">{int.name}</h4>
                   <p className="text-[var(--color-text-secondary)] text-xs mt-1">{int.desc}</p>
                   {int.highlight && (

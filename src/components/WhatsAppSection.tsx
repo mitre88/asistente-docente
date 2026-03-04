@@ -129,7 +129,7 @@ function InteractiveChat() {
 
 export default function WhatsAppSection() {
   return (
-    <section id="whatsapp" className="py-24 md:py-32 bg-[var(--color-surface)] relative overflow-hidden">
+    <section id="whatsapp" className="py-28 md:py-36 bg-[var(--color-surface)] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <RevealOnScroll>
@@ -141,12 +141,12 @@ export default function WhatsAppSection() {
                 Funciona donde{" "}
                 <span className="text-[var(--color-accent)]">ya estás</span>
               </h2>
-              <p className="text-[var(--color-text-secondary)] text-lg mb-8 leading-relaxed">
+              <p className="text-[var(--color-text-secondary)] text-lg mb-10 leading-relaxed">
                 No necesitas aprender ninguna plataforma nueva. Asistente Docente
                 funciona directamente desde WhatsApp, la aplicación que ya usas
                 todos los días.
               </p>
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {[
                   { title: "Sin instalaciones", desc: "Solo agrega nuestro número y comienza a usar la IA al instante." },
                   { title: "Lenguaje natural", desc: "Escribe como hablas. La IA entiende tu solicitud sin comandos especiales." },

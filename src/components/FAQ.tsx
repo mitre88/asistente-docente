@@ -22,9 +22,9 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section id="faq" className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-3xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-12">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             FAQ
           </span>
@@ -34,12 +34,12 @@ export default function FAQ() {
         </RevealOnScroll>
 
         <RevealOnScroll>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div key={idx} className="border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpen(open === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
                 >
                   <span className="font-semibold text-[var(--color-text)] text-sm pr-4">{faq.q}</span>
                   <svg
@@ -49,8 +49,8 @@ export default function FAQ() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${open === idx ? "max-h-40 pb-5" : "max-h-0"}`}>
-                  <p className="px-5 text-[var(--color-text-secondary)] text-sm leading-relaxed">{faq.a}</p>
+                <div className={`overflow-hidden transition-all duration-300 ${open === idx ? "max-h-40 pb-6" : "max-h-0"}`}>
+                  <p className="px-6 text-[var(--color-text-secondary)] text-sm leading-relaxed">{faq.a}</p>
                 </div>
               </div>
             ))}

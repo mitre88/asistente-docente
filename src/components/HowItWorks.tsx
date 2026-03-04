@@ -51,9 +51,9 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section id="como-funciona" className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Proceso Simple
           </span>
@@ -72,17 +72,17 @@ export default function HowItWorks() {
             <div className="w-full h-full bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-gradient-mid)] to-[var(--color-gradient-end)] rounded-full opacity-30" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {steps.map((s, idx) => (
               <RevealOnScroll key={s.step} delay={Math.min(idx + 1, 4) as 1 | 2 | 3 | 4}>
                 <div className="relative group text-center">
-                  <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-gradient-end)] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-xl shadow-purple-500/20 relative z-10">
+                  <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-gradient-end)] flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform shadow-xl shadow-purple-500/20 relative z-10">
                     {s.icon}
                   </div>
                   <div className="text-[var(--color-primary)] font-bold text-sm mb-2">
                     PASO {s.step}
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--color-text)] mb-4">
                     {s.title}
                   </h3>
                   <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">

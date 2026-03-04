@@ -66,12 +66,12 @@ export default function Capabilities() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface-dark)] relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)] relative overflow-hidden">
       <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[150px]" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-900/15 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-4">
             Capacidades Completas
           </span>
@@ -94,7 +94,7 @@ export default function Capabilities() {
             {/* Vertical connecting line */}
             <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--color-primary)] via-[var(--color-gradient-end)] to-[var(--color-primary)] opacity-30" />
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               {capabilities.map((cap, idx) => {
                 const isOpen = openIdx === idx;
                 return (
@@ -110,7 +110,7 @@ export default function Capabilities() {
 
                     <button
                       onClick={() => setOpenIdx(isOpen ? -1 : idx)}
-                      className="w-full glass rounded-xl px-6 py-5 text-left hover:border-purple-500/30 transition-all duration-300 group"
+                      className="w-full glass rounded-xl px-8 py-6 text-left hover:border-purple-500/30 transition-all duration-300 group"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -130,10 +130,10 @@ export default function Capabilities() {
 
                       <div
                         className={`overflow-hidden transition-all duration-300 ${
-                          isOpen ? "max-h-96 mt-4 opacity-100" : "max-h-0 opacity-0"
+                          isOpen ? "max-h-96 mt-5 opacity-100" : "max-h-0 opacity-0"
                         }`}
                       >
-                        <ul className="space-y-2.5">
+                        <ul className="space-y-3">
                           {cap.items.map((item) => (
                             <li key={item} className="flex items-start gap-3">
                               <svg

@@ -85,9 +85,9 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="funcionalidades" className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section id="funcionalidades" className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Funcionalidades
           </span>
@@ -103,22 +103,22 @@ export default function Features() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
             <RevealOnScroll key={feature.title} delay={Math.min(idx + 1, 4) as 1 | 2 | 3 | 4}>
-              <div className="group relative bg-white rounded-2xl p-8 border border-[var(--color-border)] hover:border-purple-200 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 hover:-translate-y-1 card-shine h-full">
+              <div className="group relative bg-white rounded-2xl p-10 border border-[var(--color-border)] hover:border-purple-200 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 hover:-translate-y-1 card-shine h-full">
                 <div
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}
+                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform shadow-lg`}
                   style={{ animation: "none" }}
                   onMouseEnter={(e) => { (e.currentTarget.style.animation as string) ; e.currentTarget.style.animation = "icon-bounce 0.4s ease"; }}
                   onAnimationEnd={(e) => { e.currentTarget.style.animation = "none"; }}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[var(--color-text)] mb-3">
+                <h3 className="text-xl font-bold text-[var(--color-text)] mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-[var(--color-text-secondary)] leading-loose">
                   {feature.description}
                 </p>
                 <div

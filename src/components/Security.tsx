@@ -13,9 +13,9 @@ const items = [
 
 export default function Security() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-16">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Confianza
           </span>
@@ -27,12 +27,12 @@ export default function Security() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {items.map((item, idx) => (
             <RevealOnScroll key={item.title} delay={Math.min((idx % 3) + 1, 3) as 1 | 2 | 3}>
-              <div className="bg-white rounded-xl p-6 border border-[var(--color-border)] text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-[var(--color-text)] mb-2">{item.title}</h3>
+              <div className="bg-white rounded-xl p-8 border border-[var(--color-border)] text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="font-bold text-[var(--color-text)] mb-3">{item.title}</h3>
                 <p className="text-[var(--color-text-secondary)] text-sm">{item.desc}</p>
               </div>
             </RevealOnScroll>

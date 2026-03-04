@@ -71,9 +71,9 @@ export default function Pricing() {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section id="precios" className="py-24 md:py-32 bg-[var(--color-surface)]">
+    <section id="precios" className="py-28 md:py-36 bg-[var(--color-surface)]">
       <div className="max-w-7xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-12">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary)] text-sm font-semibold tracking-widest uppercase mb-4">
             Precios
           </span>
@@ -109,7 +109,7 @@ export default function Pricing() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, idx) => {
             const price = annual ? plan.annualPrice : plan.monthlyPrice;
             const showSavings = annual && plan.monthlyPrice !== "Gratis" && plan.monthlyPrice !== "Personalizado";
@@ -117,7 +117,7 @@ export default function Pricing() {
             return (
               <RevealOnScroll key={plan.name} delay={Math.min(idx + 1, 3) as 1 | 2 | 3}>
                 <div
-                  className={`relative bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 group h-full ${
+                  className={`relative bg-white rounded-2xl p-10 border transition-all duration-300 hover:-translate-y-1 group h-full ${
                     plan.popular
                       ? "border-transparent shadow-xl shadow-purple-500/10 scale-[1.02]"
                       : "border-[var(--color-border)] hover:shadow-lg"
@@ -153,8 +153,8 @@ export default function Pricing() {
                       <span>Ahorras $24/año</span>
                     </div>
                   )}
-                  <p className="text-[var(--color-text-secondary)] text-sm mb-6">{plan.description}</p>
-                  <ul className="space-y-3 mb-8">
+                  <p className="text-[var(--color-text-secondary)] text-sm mb-8">{plan.description}</p>
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-center gap-3">
                         <svg className="w-5 h-5 text-[var(--color-accent)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -21,9 +21,9 @@ const statusIcon = (s: string) => {
 
 export default function Comparison() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-surface-dark)]">
+    <section className="py-28 md:py-36 bg-[var(--color-surface-dark)]">
       <div className="max-w-5xl mx-auto px-6">
-        <RevealOnScroll className="text-center mb-12">
+        <RevealOnScroll className="text-center mb-20">
           <span className="inline-block text-[var(--color-primary-light)] text-sm font-semibold tracking-widest uppercase mb-4">
             Comparativa
           </span>
@@ -37,29 +37,29 @@ export default function Comparison() {
             <table className="w-full text-sm">
               <thead>
                 <tr>
-                  <th className="text-left p-3 text-gray-400 font-semibold"></th>
-                  <th className="p-3 text-center text-gray-400 font-semibold">Sin IA</th>
-                  <th className="p-3 text-center text-gray-400 font-semibold">Otras Herramientas</th>
-                  <th className="p-3 text-center text-white font-bold bg-purple-500/20 rounded-t-lg">Asistente Docente</th>
+                  <th className="text-left p-4 text-gray-400 font-semibold"></th>
+                  <th className="p-4 text-center text-gray-400 font-semibold">Sin IA</th>
+                  <th className="p-4 text-center text-gray-400 font-semibold">Otras Herramientas</th>
+                  <th className="p-4 text-center text-white font-bold bg-purple-500/20 rounded-t-lg">Asistente Docente</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, idx) => (
                   <tr key={row.label} className={`border-t border-gray-800 ${idx % 2 === 0 ? "" : "bg-white/[0.02]"}`}>
-                    <td className="p-3 text-gray-300 font-medium">{row.label}</td>
-                    <td className="p-3 text-center">
+                    <td className="p-4 text-gray-300 font-medium">{row.label}</td>
+                    <td className="p-4 text-center">
                       <div className="flex flex-col items-center gap-1">
                         {statusIcon(row.noAIStatus)}
                         <span className="text-gray-500 text-xs">{row.noAI}</span>
                       </div>
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="p-4 text-center">
                       <div className="flex flex-col items-center gap-1">
                         {statusIcon(row.otherStatus)}
                         <span className="text-gray-500 text-xs">{row.other}</span>
                       </div>
                     </td>
-                    <td className="p-3 text-center bg-purple-500/10">
+                    <td className="p-4 text-center bg-purple-500/10">
                       <div className="flex flex-col items-center gap-1">
                         {statusIcon(row.usStatus)}
                         <span className="text-purple-300 text-xs font-semibold">{row.us}</span>

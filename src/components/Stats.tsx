@@ -56,18 +56,18 @@ function Counter({ value, suffix, decimals = 0 }: { value: number; suffix: strin
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-gradient-to-r from-[var(--color-primary)] via-purple-700 to-[var(--color-gradient-end)] relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-gradient-to-r from-[var(--color-primary)] via-purple-700 to-[var(--color-gradient-end)] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Impacto en Números</h2>
           <p className="text-purple-200 text-lg">Resultados reales de docentes en todo México</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center group">
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">
+              <div className="text-3xl mb-3">{stat.icon}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                 <Counter value={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
               <div className="text-purple-200 text-sm">{stat.label}</div>
