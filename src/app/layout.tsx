@@ -1,21 +1,32 @@
 import type { Metadata } from "next";
+import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
 export const metadata: Metadata = {
-  title: "Asistente Docente | IA para Educadores",
+  title: "Alma Cobertura | Conectividad residencial y empresarial",
   description:
-    "Asistentes de inteligencia artificial automatizados para docentes. Potencia tu enseñanza con IA directamente desde WhatsApp.",
+    "Landing corporativa para conectividad, coberturas, FODA, QR social, bot de WhatsApp y portal de pago demo.",
   keywords: [
-    "IA docente",
-    "inteligencia artificial educacion",
-    "asistente profesor",
-    "whatsapp educativo",
-    "automatizacion docente",
+    "internet residencial",
+    "cobertura empresarial",
+    "instalacion de internet",
+    "whatsapp bot",
+    "cobertura de servicio",
   ],
   openGraph: {
-    title: "Asistente Docente | IA para Educadores",
+    title: "Alma Cobertura | Conectividad residencial y empresarial",
     description:
-      "Potencia tu enseñanza con asistentes de IA automatizados desde WhatsApp",
+      "Servicio profesional con coberturas, servicios tecnicos, QR social, portal de pago demo y atencion por WhatsApp.",
     type: "website",
   },
 };
@@ -27,7 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
